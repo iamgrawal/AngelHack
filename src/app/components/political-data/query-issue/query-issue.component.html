@@ -1,0 +1,39 @@
+<div class="jumbotron">
+  <h1 style="text-align:center;font-weight:bold">Unresolved Issues</h1>
+</div>
+
+<div class="container-fluid">
+  <div  class="row">
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Brand Name</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a [routerLink]="['/issue']">Raise an Issue</a></li>
+          <li><a [routerLink]="['/unsolved']">Unsolved Issues</a></li>
+          <li><a [routerLink]="['/resolved']">Resolved Issues</a></li>
+          <li><a [routerLink]="['/trending']">Trending Works</a></li>
+
+         </ul>
+      </div> 
+    </nav>     
+    
+  </div>
+  <div class="row">
+
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2" *ngFor="let store of data;let i=index">
+      
+    <div class="thumbnail"> 
+        <h1 style="text-align:center">{{store.title}}</h1>
+        <img src="{{store.imageUrl}}" class="thumbnail" width="1000px" height="400px">
+        <h3>Pincode: {{store.location}}</h3>
+        <p><span style="font-weight:bold">Description: </span>{{store.description}}</p>
+        
+    </div>
+</div>
+    
+  </div>
+
+</div>

@@ -1,0 +1,37 @@
+
+<div class="jumbotron"></div>
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Firstname: </label>
+      <input type="text" class="form-control input-sm" id="title" placeholder="Firstname" name="firstname" [(ngModel)]="firstname">
+    </div>
+
+    <div class="form-group">
+      <label for="model-size">Lastname: </label>
+      <input type="text" class="form-control input-sm" id="lastname" placeholder="Lastname" name="lastname" [(ngModel)]="lastname" >
+    </div>   
+   
+    <div class="form-group">
+      <label for="price">Address: </label>
+      <input type="text" class="form-control input-sm" id="price" placeholder="Address" name="address"  [(ngModel)]="address">
+    </div>
+     <div class="form-group"> 
+      <label for="image">Pincode: </label>
+      <input type="text" class="form-control input-sm" id="image" placeholder="Pincode" name="pincode"  [(ngModel)]="pincode">
+    </div>
+
+    <div class="form-group">
+      <label for="adhar">AdharId: </label>
+      <input type="text" class="form-control input-sm" id="adhar" placeholder="AdharId" name="adharId" [(ngModel)]="adharId" >
+    </div>
+
+    <div class="form-group">
+        <label for="Authenticate">File input</label>
+        <input type="file" id="Authenticate">
+        <p class="help-block">Prove that you are a MLA or Minister. We will authenticate and get bak to you when we are done</p>
+      </div>
+
+    <a [routerLink]="['/']"><button type="submit" class="btn btn-danger">Submit</button></a>
+  </form>
+</div>
