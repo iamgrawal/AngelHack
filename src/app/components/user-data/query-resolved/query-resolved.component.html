@@ -1,3 +1,85 @@
-<p>
-  query-resolved works!
-</p>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<div class="container-fluid">
+  <div  class="row">
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Polle-tician</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a [routerLink]="['/issue']">Raise an Issue</a></li>
+          <li><a [routerLink]="['/unsolved']">Unsolved Issues</a></li>
+          <li><a [routerLink]="['/resolved']">Resolved Issues</a></li>
+          <li><a [routerLink]="['/trending']">Trending Works</a></li>
+
+         </ul>
+      </div> 
+    </nav>     
+    
+  </div>
+  <div class="row">
+
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2" *ngFor="let store of data;let i=index">
+      
+    <div class="thumbnail"> 
+        <h1 style="text-align:center">{{store.title}}</h1>
+        <img src="{{store.imageUrl}}" class="thumbnail" width="1000px" height="400px">
+        <h3>Pincode: {{store.location}}</h3>
+        <p><span style="font-weight:bold">Description: </span>{{store.description}}</p>
+        
+    </div>
+</div>
+    
+  </div>
+<div class="component-bg">
+    <div class="container">
+      <div class="col-lg-3">
+      <div class="blog-side-item">
+        <div>
+          <button class="btn btn-success">button 1</button>
+        </div>
+        <div class="category">
+          <h3>
+            Categories
+          </h3>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">
+                 
+                Animals
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                 
+                Landscape
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                 
+                Portait
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                 
+                Wild Life
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                 
+                Video
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+        <div class="col-lg-9">
+          <h1>Resolved Issues</h1>
+        </div>
+  </div>
+</div>
